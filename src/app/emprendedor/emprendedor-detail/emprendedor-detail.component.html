@@ -1,30 +1,13 @@
-<div *ngIf="emprendedor" style="margin-bottom: 2rem;">
-    <h3>{{emprendedor?.nombre}}</h3>
-    <div>
-        <div style="height: 300px; display: inline-block;">
-            <img [src]="emprendedor?.foto_url" alt="{{ emprendedor?.nombre }}" style="width: 80%; ">
-        </div>
-        
-        <div style="width: 50%; display: inline-block;">
-            <p><strong>Pregrado: </strong> {{emprendedor.pregrado}} </p>
-            <p><strong>Genero: </strong> {{emprendedor.genero}} </p>
-            <p><strong>Emprendimientos: </strong></p>
-            <ul>
-                <li *ngFor="let emprendimiento of emprendedor.emprendimientos">{{ emprendimiento }}</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
 <div class="container py-4">
   <div class="row g-4">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card h-100 text-center">
-          <img [src]="emprendedor?.foto_url" alt="{{ emprendedor?.nombre }}" style="width: 80%; ">
+          <img [src]="emprendedor?.foto_url" alt="{{ emprendedor?.nombre }}" style="width: 80%; " >
           <div class="card-body">
             <h5 class="card-title"> Pregrado: {{ emprendedor.pregrado}}</h5>
             <p class="card-text mb-1"><strong>Genero:</strong> {{ emprendedor.genero }}</p> 
+            <p><strong>Emprendimientos: </strong></p>
+            <p *ngFor="let emprendimiento of emprendedor.emprendimientos">{{ emprendimiento }}</p>
             <button 
               class="btn btn-primary mt-2" (click)="goBack()">
               regresar 
