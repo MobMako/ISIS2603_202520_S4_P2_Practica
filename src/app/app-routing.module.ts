@@ -4,8 +4,8 @@ import { EmprendedorListComponent } from './emprendedor/emprendedor-list/emprend
 import { EmprendedorDetailComponent } from './emprendedor/emprendedor-detail/emprendedor-detail.component';
 
 const routes: Routes = [
-  {path: 'emprendedor/', component: EmprendedorListComponent},
-  {path: 'emprendedor/:id/', component: EmprendedorDetailComponent}
+  {path: 'emprendedor', component: EmprendedorListComponent},
+  {path: 'emprendedor/:id', component: EmprendedorDetailComponent}
 ];
 
 

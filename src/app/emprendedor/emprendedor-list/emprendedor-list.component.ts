@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Emprendedor } from '../emprendedor';
 import { EmprendedorService } from '../emprendedor.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emprendedor-list',
@@ -21,7 +22,7 @@ export class EmprendedorListComponent implements OnInit {
     this.seleccionado = true;
   }
 
-constructor(private emprendedorService: EmprendedorService) {}
+constructor(private emprendedorService: EmprendedorService, private router : Router) {}
 
 getEmprendedorList(): Array<Emprendedor> {
   this.emprendedorService.getEmprendedores().subscribe((data) => {
@@ -33,5 +34,10 @@ getEmprendedorList(): Array<Emprendedor> {
   ngOnInit() {
     this.getEmprendedorList();
 }
+
+goToDetail(id: number) {
+  this.router.navigate(['/emprendedor', id.toString()]);
+}
+
 
 }

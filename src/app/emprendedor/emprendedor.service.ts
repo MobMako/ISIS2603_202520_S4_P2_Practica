@@ -20,7 +20,7 @@ export class EmprendedorService {
 
   
   getEmprendedorById(id: number): Observable<Emprendedor> {
-    return this.http.get<Emprendedor>(this.apiUrl + id.toString() + environment.apiUrlEnd);
+    return this.http.get<Emprendedor>(this.apiUrl + id.toString() + environment.api1);
   }
   
 

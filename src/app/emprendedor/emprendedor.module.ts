@@ -14,7 +14,9 @@ import { EmprendedorDetailComponent } from './emprendedor-detail/emprendedor-det
     CommonModule
   ],
   exports: [
-    EmprendedorListComponent
+    EmprendedorListComponent,
+    EmprendedorDetailComponent
+
   ]
 })
 export class EmprendedorModule { }
