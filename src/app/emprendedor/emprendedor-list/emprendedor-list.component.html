@@ -8,13 +8,13 @@
           <td><img [src]="emprendedor.foto_url" alt="{{ emprendedor.nombre }}" style="width: 150px; height: auto;"></td>
           <div class="card-body">
             <h5 class="card-title">{{ emprendedor.nombre }}</h5>
-            <p class="card-text mb-1"><strong>Porciones:</strong> {{ emprendedor.genero }}</p>
-            <p class="card-text"><strong>Tiempo:</strong> {{ emprendedor.pregrado }}</p>
+            <p class="card-text mb-1"><strong>genero:</strong> {{ emprendedor.genero }}</p>
+            <p class="card-text"><strong>pregrado:</strong> {{ emprendedor.pregrado }}</p>
           </div>
         </div>
       </div>
     }
-    <button class="btn btn-primary mt-2" style="width:240px height:240px ;">
+    <button class="btn btn-primary mt-2" style="width:240px; height:40px;">
         <p> total emprendedores {{emprendedores.length }}</p>
     </button>
     
