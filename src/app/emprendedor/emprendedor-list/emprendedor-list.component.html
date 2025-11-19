@@ -3,21 +3,17 @@
 <div class="container py-4">
   <div class="row g-4">
     @for (emprendedor of emprendedores; track emprendedor.id) {
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div (click)="goToDetail(emprendedor.id)" class="col-20 col-sm-20 col-md-0 col-lg-2">
         <div class="card h-100 text-center">
-          <td><img [src]="emprendedor.foto_url" alt="{{ emprendedor.nombre }}" style="width: 30px; height: auto;"></td>
+          <td><img [src]="emprendedor.foto_url" alt="{{ emprendedor.nombre }}" style="width: 150px; height: auto;"></td>
           <div class="card-body">
             <h5 class="card-title">{{ emprendedor.nombre }}</h5>
             <p class="card-text mb-1"><strong>Porciones:</strong> {{ emprendedor.genero }}</p>
             <p class="card-text"><strong>Tiempo:</strong> {{ emprendedor.pregrado }}</p>
-            <button 
-              class="btn btn-primary mt-2"
-              (click)="goToDetail(emprendedor.id)">
-              Ver la receta
-            </button>
           </div>
         </div>
       </div>
     }
+    <h4> total emprendedores {{emprendedores.length }}</h4>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { EmprendedorService } from '../emprendedor.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-emprendedor-detail',
@@ -12,7 +12,7 @@ export class EmprendedorDetailComponent {
   
   protected emprendedor: any;
 
-constructor(private route: ActivatedRoute, private emprendedorService: EmprendedorService) {}
+constructor(private route: ActivatedRoute, private emprendedorService: EmprendedorService , private router : Router) {}
 
   ngOnInit() {
   this.route.paramMap.subscribe(params => {
@@ -23,6 +23,9 @@ constructor(private route: ActivatedRoute, private emprendedorService: Emprended
       });
     }
   });
+}
+  goBack() {
+  this.router.navigate(['/emprendedor']);
 }
 
 }
